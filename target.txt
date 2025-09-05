@@ -1,0 +1,102 @@
+# Nmap 7.95 scan initiated Mon Sep  1 14:39:22 2025 as: /usr/lib/nmap/nmap -T4 -A -oN target.txt 192.168.1.0/24
+Nmap scan report for pfSense.home.arpa (192.168.1.1)
+Host is up (0.0074s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 9.4 (protocol 2.0)
+53/tcp  open  domain   Unbound
+80/tcp  open  http     nginx
+|_http-title: Did not follow redirect to https://pfSense.home.arpa/
+443/tcp open  ssl/http nginx
+|_ssl-date: TLS randomness does not represent time
+|_http-title: pfSense - Login
+| ssl-cert: Subject: commonName=pfSense-680f9ba9888cd/organizationName=pfSense GUI default Self-Signed Certificate
+| Subject Alternative Name: DNS:pfSense-680f9ba9888cd
+| Not valid before: 2025-04-28T15:15:54
+|_Not valid after:  2026-05-31T15:15:54
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+MAC Address: 08:00:27:9D:17:E3 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): FreeBSD 11.X (97%)
+OS CPE: cpe:/o:freebsd:freebsd:11.2
+Aggressive OS guesses: FreeBSD 11.2-RELEASE (97%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   7.41 ms pfSense.home.arpa (192.168.1.1)
+
+Nmap scan report for 192.168.1.112
+Host is up (0.0041s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 9.6p1 Ubuntu 3ubuntu13.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 2d:1b:97:af:e2:05:67:97:54:37:f3:bf:24:1b:88:75 (ECDSA)
+|_  256 ee:56:cc:01:95:9c:e3:37:30:4c:e6:57:b4:04:c0:39 (ED25519)
+30000/tcp open  http    Apache httpd 2.4.63 ((Unix))
+|_http-server-header: Apache/2.4.63 (Unix)
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|_  Potentially risky methods: TRACE
+MAC Address: 08:00:27:E2:CE:D2 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Device type: general purpose|router
+Running: Linux 4.X|5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 4.15 - 5.19, OpenWrt 21.02 (Linux 5.4), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   4.15 ms 192.168.1.112
+
+Nmap scan report for 192.168.1.117
+Host is up (0.027s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE       VERSION
+135/tcp open  msrpc         Microsoft Windows RPC
+139/tcp open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+MAC Address: 08:00:27:36:24:44 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Device type: general purpose
+Running: Microsoft Windows 10
+OS CPE: cpe:/o:microsoft:windows_10
+OS details: Microsoft Windows 10 1709 - 21H2
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -9s
+|_nbstat: NetBIOS name: DESKTOP-CJ37KU8, NetBIOS user: <unknown>, NetBIOS MAC: 08:00:27:36:24:44 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+| smb2-time: 
+|   date: 2025-09-01T13:39:42
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   27.07 ms 192.168.1.117
+
+Nmap scan report for 192.168.1.109
+Host is up (0.00013s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.0p2 Debian 5 (protocol 2.0)
+Device type: general purpose
+Running: Linux 2.6.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:5 cpe:/o:linux:linux_kernel:6
+OS details: Linux 2.6.32, Linux 5.0 - 6.2
+Network Distance: 0 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep  1 14:40:03 2025 -- 256 IP addresses (4 hosts up) scanned in 41.84 seconds
